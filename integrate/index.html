@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
   <meta charset="UTF-8">
   <title>Merchandising Management System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✅ makes it responsive -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
   <link rel="icon" type="image/jpeg" href="images/logo.jfif">
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
     body { background-color: #fdf6ec; color: #4b2e2e; scroll-behavior: smooth; }
@@ -37,7 +36,6 @@
       border: 4px solid #d9c3a8; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-bottom: 20px;
       transition: transform 0.3s ease;
     }
-
     .logo:hover { transform: scale(1.05); }
 
     header h1 {
@@ -71,7 +69,7 @@
       text-align: center; margin-bottom: 50px; color: #5a3e2b;
     }
 
-    /* Module Boxes Design */
+    /* Module Boxes */
     .module {
       background-color: #fff6e6;
       border: 1px solid #d8bfa0;
@@ -83,7 +81,6 @@
       transition: all 0.8s ease, transform 0.3s ease;
       box-shadow: 0 3px 8px rgba(0,0,0,0.05);
     }
-
     .module:hover {
       transform: translateY(-3px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.08);
@@ -95,6 +92,7 @@
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes slideDown { from { opacity:0; transform: translateY(-30px);} to {opacity:1; transform: translateY(0);} }
 
+    /* ✅ Tablet */
     @media (max-width: 768px) {
       section { padding: 40px 10px; }
       .module { padding: 12px 15px; }
@@ -103,6 +101,17 @@
       header h1 { font-size: 26px; }
       header p { font-size: 12px; max-width: 300px; }
       .logo { width: 120px; height: 120px; }
+    }
+
+    /* ✅ Small phones */
+    @media (max-width: 480px) {
+      header { padding: 0 10px; }
+      .logo { width: 100px; height: 100px; }
+      header h1 { font-size: 22px; }
+      header p { font-size: 11px; max-width: 260px; }
+      .btn { padding: 10px 18px; font-size: 14px; }
+      .module-content h3 { font-size: 16px; }
+      .module-content p { font-size: 12px; }
     }
   </style>
 </head>
@@ -113,89 +122,27 @@
     <img src="images/logo.jfif" alt="MMS Logo" class="logo">
     <h1>Welcome to Merchandising Management System</h1>
     <p>Streamline operations and manage products, inventory, and teams efficiently. Explore the sections below.</p>
-    <!-- Go to Modules button -->
     <a href="/dashboard.html" class="btn">Go to System Modules</a>
   </header>
 
-  <!-- Modules Section -->
+  <!-- Modules -->
   <section id="modules">
     <h2 class="section-title">Our System Modules</h2>
 
-    <div class="module" data-scroll>
-      <div class="module-content">
-        <h3>Human Resource 1</h3>
-        <p>Manage employee records and daily HR operations. Keep track of attendance and schedules.</p>
-      </div>
-    </div>
-
-    <div class="module" data-scroll>
-      <div class="module-content">
-        <h3>Human Resource 2</h3>
-        <p>Handles recruitment, interviews, and new employee onboarding. Ensures smooth HR processes.</p>
-      </div>
-    </div>
-
-    <div class="module" data-scroll>
-      <div class="module-content">
-        <h3>Human Resource 3</h3>
-        <p>Focuses on employee training and development. Improves workforce efficiency.</p>
-      </div>
-    </div>
-
-    <div class="module" data-scroll>
-      <div class="module-content">
-        <h3>Human Resource 4</h3>
-        <p>Manages performance evaluations and internal communication. Supports HR strategies.</p>
-      </div>
-    </div>
-
-    <div class="module" data-scroll>
-      <div class="module-content">
-        <h3>Core Transaction 1</h3>
-        <p>Manages core product and inventory operations. Ensures smooth business processes.</p>
-      </div>
-    </div>
-
-    <div class="module" data-scroll>
-      <div class="module-content">
-        <h3>Core Transaction 2</h3>
-        <p>Handles advanced operations and reporting. Tracks transactions efficiently.</p>
-      </div>
-    </div>
-
-    <div class="module" data-scroll>
-      <div class="module-content">
-        <h3>Logistics 1</h3>
-        <p>Streamlines deliveries and supply chain management. Improves shipment tracking.</p>
-      </div>
-    </div>
-
-    <div class="module" data-scroll>
-      <div class="module-content">
-        <h3>Logistics 2</h3>
-        <p>Manages warehouse operations and transport schedules. Ensures timely distribution.</p>
-      </div>
-    </div>
-
-    <div class="module" data-scroll>
-      <div class="module-content">
-        <h3>Administrative</h3>
-        <p>Handles office management, documentation, and clerical tasks. Supports smooth operations.</p>
-      </div>
-    </div>
-
-    <div class="module" data-scroll>
-      <div class="module-content">
-        <h3>Financials</h3>
-        <p>Manages budgeting, accounting, and financial reporting. Ensures accurate financial records.</p>
-      </div>
-    </div>
-
+    <div class="module" data-scroll><div class="module-content"><h3>Human Resource 1</h3><p>Manage employee records and daily HR operations.</p></div></div>
+    <div class="module" data-scroll><div class="module-content"><h3>Human Resource 2</h3><p>Handles recruitment, interviews, and onboarding.</p></div></div>
+    <div class="module" data-scroll><div class="module-content"><h3>Human Resource 3</h3><p>Focuses on employee training and development.</p></div></div>
+    <div class="module" data-scroll><div class="module-content"><h3>Human Resource 4</h3><p>Manages performance evaluations and communication.</p></div></div>
+    <div class="module" data-scroll><div class="module-content"><h3>Core Transaction 1</h3><p>Manages core product and inventory operations.</p></div></div>
+    <div class="module" data-scroll><div class="module-content"><h3>Core Transaction 2</h3><p>Handles advanced operations and reporting.</p></div></div>
+    <div class="module" data-scroll><div class="module-content"><h3>Logistics 1</h3><p>Streamlines deliveries and supply chain management.</p></div></div>
+    <div class="module" data-scroll><div class="module-content"><h3>Logistics 2</h3><p>Manages warehouse operations and schedules.</p></div></div>
+    <div class="module" data-scroll><div class="module-content"><h3>Administrative</h3><p>Handles office management and documentation.</p></div></div>
+    <div class="module" data-scroll><div class="module-content"><h3>Financials</h3><p>Manages budgeting and financial reporting.</p></div></div>
   </section>
 
  <script>
   const modules = document.querySelectorAll('.module');
-
   const toggleModulesOnScroll = () => {
     const triggerBottom = window.innerHeight / 1.1;
     modules.forEach(module => {
@@ -209,14 +156,9 @@
       }
     });
   };
-
   window.addEventListener('scroll', toggleModulesOnScroll);
-  toggleModulesOnScroll(); // initial check
+  toggleModulesOnScroll();
 </script>
 
 </body>
 </html>
-
-
-
-
